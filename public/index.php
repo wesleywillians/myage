@@ -8,4 +8,4 @@ $today = new \DateTime;
 
 $age = new \App\Age($date, $today);
 ?>
-Minha idade é: <?=$age->calculate();?>
+Minha idade é <?=$age->calculate();?>...
