@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-php
+  labels:
+    app: nginx-php
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx-php
+      tier: webserver
+  template:
+    metadata:
+      labels:
+        app: nginx-php
+        tier: webserver
+    spec:
+      containers:
+      - image: gcr.io/schoolofnet-teste/myage@sha256:88c60463b2e9008719e1aa1b8b9477a93cfe229ffb55a61bccaf61371895749c
+        name: nginx-php
+        ports:
+        - containerPort: 80

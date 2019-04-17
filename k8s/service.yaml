@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-php-service
+  labels:
+    app: nginx-php
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: nginx-php
+    tier: webserver
+  type: LoadBalancer
