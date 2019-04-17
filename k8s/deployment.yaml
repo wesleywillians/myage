@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx-php
 spec:
-  replicas: 2
+  replicas: 10
   selector:
     matchLabels:
       app: nginx-php
@@ -17,7 +17,7 @@ spec:
         tier: webserver
     spec:
       containers:
-      - image: gcr.io/schoolofnet-teste/myage@sha256:e3249d413eb8c75c93d11b6828b50a178ee2292ce6be6c444448ab75c8d87958
+      - image: gcr.io/schoolofnet-teste/myage@sha256:88f7b1c84a3aef89de3f4876a164dd0a56b94a62d1089af3bac1992f0237e234
         name: nginx-php
         ports:
         - containerPort: 80
