@@ -17,7 +17,7 @@ spec:
         tier: webserver
     spec:
       containers:
-      - image: gcr.io/schoolofnet-teste/myage@sha256:88c60463b2e9008719e1aa1b8b9477a93cfe229ffb55a61bccaf61371895749c
+      - image: gcr.io/schoolofnet-teste/myage@sha256:e3249d413eb8c75c93d11b6828b50a178ee2292ce6be6c444448ab75c8d87958
         name: nginx-php
         ports:
         - containerPort: 80
